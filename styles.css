@@ -1,0 +1,114 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:100px;
+    background-color: #FF6314;
+    width:200px;
+    height:auto;
+    border-radius: 100px;
+
+margin-bottom: 100px;
+    
+  
+}
+
+
+
+#buttonContainer button {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 10px;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+#buttonContainer button:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+#buttonContainer button:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+    #buttonContainer button {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
+
+body{
+
+
+    display:flex;
+    flex-direction: column;
+   align-items: center;
+  text-align: center;
+  background-color: #FFC229;
+
+}
+
+h2{
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 10em;
+    border-style: none;
+    border-color: black;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 10px;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    width:200px;
+
+    height: 150px;
+}
+
+#headerContainer {
+    display:flex;
+}
+
+h1{
+    
+        font-family: "Yanone Kaffeesatz";
+        font-size: 100px;
+     
+      
+        user-select: none;
+    
+}
