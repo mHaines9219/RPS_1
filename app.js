@@ -1,9 +1,5 @@
 
-let choiceArray = ['ROCK', 'PAPER', 'SCISSOR'];
 
-let computerChoiceDisplay = document.getElementById('computer-choice');
-let userChoiceDisplay = document.getElementById('user-choice');
-let resultDisplay = document.getElementById('result');
 const rockButton = document.getElementById('ROCK');
 const paperButton = document.getElementById('PAPER');
 const scissorButton = document.getElementById('SCISSOR');
@@ -18,6 +14,11 @@ return Math.floor(Math.random() * max)
 }
 
 function handleButtonClick(event) {
+  let choiceArray = ['ROCK', 'PAPER', 'SCISSOR'];
+  let computerChoiceDisplay = document.getElementById('computer-choice');
+let userChoiceDisplay = document.getElementById('user-choice');
+let resultDisplay = document.getElementById('result');
+
   if(event.target.tagName === 'BUTTON'){ // Retrieve the 'id' attribute of the clicked button
     const buttonId = event.target.id;
     let computerNum = computerChoice(3);
