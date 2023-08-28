@@ -11,17 +11,54 @@
     <h2>Computer Choice: <span id="computer-choice"></span></h2>
     <h2>User Choice: <span id="user-choice"></span></h2>
     <h2>Result: <span id="result"></span></h2>
-
+<div id="buttonContainer">
     <button id="rock">ROCK</button>
     <button id="paper">PAPER</button>
     <button id="scissor">SCISSOR</button>
 
-
+</div>
 
 
 
 
     <script>
+
+let choiceArray = ['rock', 'paper', 'scissor'];
+let computerNum = computerChoice(3);
+let computerPick = choiceArray[computerNum];
+const rockButton = document.getElementById('rock');
+const paperButton = document.getElementById('paper');
+const scissorButton = document.getElementById('scissor');
+
+rockButton.addEventListener('click', handleButtonClick);
+paperButton.addEventListener('click', handleButtonClick);
+scissorButton.addEventListener('click', handleButtonClick);
+
+
+
+//generate computer choice
+function computerChoice(max) {
+return Math.floor(Math.random() * max)
+}
+//get user choice
+
+
+function handleButtonClick(event) {
+  if(event.target.tagName === 'BUTTON'){ // Retrieve the 'id' attribute of the clicked button
+    const buttonId = event.target.id;
+    return buttonId;
+}
+}
+
+console.log(computerPick)
+
+//work cmputer choice into an array
+
+
+//once user clicks choice, computer picks and moves are compared
+
+// output messages 
+
 
 
 
