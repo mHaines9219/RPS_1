@@ -26,6 +26,9 @@
 let choiceArray = ['rock', 'paper', 'scissor'];
 let computerNum = computerChoice(3);
 let computerPick = choiceArray[computerNum];
+let computerChoiceDisplay = document.getElementById('computer-choice');
+let userChoiceDisplay = document.getElementById('user-choice');
+let resultDisplay = document.getElementById('result');
 const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
 const scissorButton = document.getElementById('scissor');
@@ -46,11 +49,33 @@ return Math.floor(Math.random() * max)
 function handleButtonClick(event) {
   if(event.target.tagName === 'BUTTON'){ // Retrieve the 'id' attribute of the clicked button
     const buttonId = event.target.id;
-    return buttonId;
+    if (computerPick === buttonId){
+    computerChoiceDisplay.innerHTML = computerPick 
+    userChoiceDisplay.innerHTML = buttonId;
+    resultDisplay.innerHTML = "It's a tie!";}
+
+        else if (computerPick === 'rock' && buttonId === 'paper' ||
+        computerPick === 'paper' && buttonId === 'scissor' ||
+        computerPick === 'scissor' && buttonId === 'rock')
+{
+    computerChoiceDisplay.innerHTML = computerPick 
+    userChoiceDisplay.innerHTML = buttonId;
+    resultDisplay.innerHTML = " You've beaten the computer!"
 }
+        else if (computerPick === 'rock' && buttonId === 'scissor' ||
+                computerPick === 'paper' && buttonId === 'rock' ||
+                computerPick === 'scissor' && buttonId === 'paper')
+        {
+            computerChoiceDisplay.innerHTML = computerPick 
+    userChoiceDisplay.innerHTML = buttonId;
+            resultDisplay.innerHTML = "You've been beaten by the computer!"      ;
+  }
 }
 
-console.log(computerPick)
+
+}
+
+;
 
 //work cmputer choice into an array
 
@@ -58,7 +83,6 @@ console.log(computerPick)
 //once user clicks choice, computer picks and moves are compared
 
 // output messages 
-
 
 
 
