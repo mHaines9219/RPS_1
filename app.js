@@ -1,7 +1,6 @@
 
 let choiceArray = ['ROCK', 'PAPER', 'SCISSOR'];
-let computerNum = computerChoice(3);
-let computerPick = choiceArray[computerNum];
+
 let computerChoiceDisplay = document.getElementById('computer-choice');
 let userChoiceDisplay = document.getElementById('user-choice');
 let resultDisplay = document.getElementById('result');
@@ -21,6 +20,8 @@ return Math.floor(Math.random() * max)
 function handleButtonClick(event) {
   if(event.target.tagName === 'BUTTON'){ // Retrieve the 'id' attribute of the clicked button
     const buttonId = event.target.id;
+    let computerNum = computerChoice(3);
+    let computerPick = choiceArray[computerNum];
     if (computerPick === buttonId){
     computerChoiceDisplay.innerHTML = computerPick 
     userChoiceDisplay.innerHTML = buttonId;
